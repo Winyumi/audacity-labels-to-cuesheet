@@ -26,6 +26,7 @@
       }, 3000);
     }
     catch (err) {
+      alert('Failed to copy to clipboard. Please copy manually instead.');
       console.error(err);
     }
   }
