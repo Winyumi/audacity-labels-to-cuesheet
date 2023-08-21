@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>audacity-labels-to-cuesheet</title>
+  <link href="style.css" rel="stylesheet">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+
+    <h1>audacity-labels-to-cuesheet</h1>
+
+    <form id="input" spellcheck="false">
+      <div>
+        <label for="album_artist">Album Artist</label>
+        <input type="text" name="album_artist" id="album_artist">
+      </div>
+
+      <div>
+        <label for="album_title">Album Title</label>
+        <input type="text" name="album_title" id="album_title">
+      </div>
+
+      <div>
+        <label for="filename">Filename with Extension</label>
+        <input type="text" name="filename" id="filename">
+      </div>
+
+      <div>
+        <label for="audacity_labels_txt">Audacity Labels TXT</label>
+        <textarea name="audacity_labels_txt" id="audacity_labels_txt" placeholder="0.000000	0.000000	Dave Rodgers - Deja Vu&#10;223.673097	223.673097	Dave Rodgers - Beat Of The Rising Sun"></textarea>
+      </div>
+
+      <div>
+        <button type="submit">Generate cuesheet</button>
+        <button type="reset">Clear</button>
+      </div>
+    </form>
+
+    <div id="output">
+      <label for="cuesheet_output">Output</label>
+      <textarea id="cuesheet_output" placeholder="Cuesheet appears here" readonly></textarea>
+      <button id="copy">Copy to clipboard</button>
+    </div>
+
+  </div>
+</body>
+</html>

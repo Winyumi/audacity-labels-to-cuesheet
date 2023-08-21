@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+
+:root {
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 14px;
+}
+* {
+  font-family: inherit;
+  box-sizing: border-box;
+}
+body {
+  margin: 30px;
+}
+.container {
+  max-width: 600px;
+  margin-inline: auto;
+}
+textarea {
+  font-family: monospace;
+  resize: vertical;
+}
+form {
+  display: grid;
+  gap: 1em;
+}
+#input label,
+#input input,
+#input textarea {
+  display: block;
+}
+#input input {
+  width: 50%;
+}
+#input textarea {
+  width: 100%;
+  min-height: 10em;
+}
+#output {
+  margin-block: 5em;
+}
+#output textarea {
+  width: 100%;
+  min-height: 20em;
+}
