@@ -55,6 +55,9 @@
         start: cols[0],
         end: cols[1],
       };
+      if (isNaN(track.start) || isNaN(track.end)) {
+        throw new Error('Failed to parse Audacity labels TXT. Please check .txt file export.');
+      }
       output.push([
         `  TRACK ${addLeadingZeroes(index, indexDigits)} AUDIO`,
         `    PERFORMER "${track.artist}"`,
