@@ -44,8 +44,8 @@
       index++;
       const cols = line.replace(' - ', '\t').split('\t');
       const track = {
-        artist: cols[2],
-        title: cols[3],
+        artist: cols[3] ? cols[2] : '',
+        title: cols[3] ? cols[3] : cols[2],
         start: cols[0],
         end: cols[1],
       };
