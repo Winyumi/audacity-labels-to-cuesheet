@@ -66,21 +66,11 @@
   }
 
   function formatTrackDuration(seconds = 0) {
-    // 3365.847755
-    let m, s, ms, fr;
-    s = parseInt(seconds); // 3365
-    ms = seconds - s; // 0.847755
-    fr = Math.round(ms * 75); // 64
-    m = s / 60; // 56.08333333333333
-    s = Math.round((m - parseInt(m)) * 60); // 5
-    m = parseInt(m); // 56
-    let output = [
-      m,
-      addLeadingZeroes(s, 2),
-      addLeadingZeroes(fr, 2)
-    ].join(':');
-    // 56:05:64
-    return output;
+    // 3365.847755 => 56:05:64
+    let fr = addLeadingZeroes(Math.round(seconds % 1 * 75), 2); // 64
+    let s = addLeadingZeroes(parseInt(seconds % 60), 2); // 05
+    let m = parseInt(seconds / 60); // 56
+    return [m, s, fr].join(':');
   }
 
 })();
