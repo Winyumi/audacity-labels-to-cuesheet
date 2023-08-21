@@ -7,13 +7,12 @@
   form.onsubmit = (ev) => {
     ev.preventDefault();
     const fields = /** @type {FormFields} */ (Object.fromEntries(new FormData(form)));
-    const outputArray = [
+    output.textContent = [
       `PERFORMER "${fields.album_artist}"`,
       `TITLE "${fields.album_title}"`,
       `FILE "${fields.filename}" WAVE`,
       parseAudacityLabels(fields.audacity_labels_txt),
-    ];
-    output.textContent = outputArray.join('\n');
+    ].join('\n');
   };
 
   copyBtn.onclick = (ev) => {
