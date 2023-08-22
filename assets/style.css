@@ -2,7 +2,7 @@
 
 
 :root {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: sans-serif;
   font-size: 14px;
 }
 * {
@@ -10,36 +10,50 @@
   box-sizing: border-box;
 }
 body {
-  margin: 30px;
+  margin: 2rem;
 }
 .container {
   max-width: 600px;
   margin-inline: auto;
 }
+#input,
+#output {
+  display: grid;
+  gap: 1rem;
+  margin-block-start: 3rem;
+}
+label {
+  display: block;
+  width: 100%;
+  margin-block-end: 0.25rem;
+}
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0;
+}
+input {
+  font-size: 1rem;
+}
 textarea {
   font-family: monospace;
   resize: vertical;
 }
-form {
-  display: grid;
-  gap: 1em;
+button {
+  font-size: 1rem;
+  padding: 0.5rem 0.75rem;
 }
-#input label,
-#input input,
-#input textarea {
-  display: block;
-}
-#input input {
+input#album_artist,
+input#album_title,
+input#filename {
   width: 50%;
 }
-#input textarea {
-  width: 100%;
-  min-height: 10em;
+textarea#audacity_labels_txt {
+  min-height: 10rem;
 }
-#output {
-  margin-block: 5em;
-}
-#output textarea {
-  width: 100%;
-  min-height: 20em;
+textarea#cuesheet_output {
+  min-height: 20rem;
 }
