@@ -8,6 +8,7 @@
     ev.preventDefault();
     try {
       const fields = /** @type {FormFields} */ (Object.fromEntries(new FormData(form)));
+      for (const field in fields) fields[field] = fields[field].replace(/\"/g, "''");
       output.textContent = [
         `PERFORMER "${fields.album_artist}"`,
         `TITLE "${fields.album_title}"`,
