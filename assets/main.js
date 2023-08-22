@@ -1,8 +1,8 @@
 (function () {
 
-  const form = /** @type {HTMLFormElement} */ (document.querySelector('#input'));
-  const output = /** @type {HTMLTextAreaElement} */ (document.querySelector('#cuesheet_output'));
-  const copyBtn = /**@type {HTMLButtonElement} */ (document.querySelector('#output #copy'));
+  const form = /** @type {HTMLFormElement} */ (document.querySelector('form#input'));
+  const output = /** @type {HTMLTextAreaElement} */ (document.querySelector('textarea#cuesheet_output'));
+  const copyBtn = /**@type {HTMLButtonElement} */ (document.querySelector('button#copy'));
 
   form.onsubmit = (ev) => {
     ev.preventDefault();
